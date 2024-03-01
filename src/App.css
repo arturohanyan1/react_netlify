@@ -16,12 +16,18 @@
   height: 40px;
   background-color: var(--tg-theme-header-bg-color, red);
   color: var(--tg-theme-section-header-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
   height: 50px;
   width: 100px;
-  background-color: var(--tg-theme-button-color);
+  background-color: var(--tg-theme-button-color, red);
   color: var(--tg-theme-button-text-color);
   margin: 50px auto;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

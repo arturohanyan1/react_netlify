@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="page">
-      <header className="header">{TG?.initDataUnsafe?.user?.username}</header>
+      <header className="header">{TG?.initDataUnsafe?.user?.username ?? 'eee'}</header>
       <button onClick={onClose}>Close</button>
     </div>
   );
