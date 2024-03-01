@@ -22,7 +22,7 @@
 }
 
 button {
-  height: 50px;
+  height: 30px;
   width: 100px;
   background-color: var(--tg-theme-button-color, red);
   color: var(--tg-theme-button-text-color);
