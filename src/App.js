@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 const TG = window.Telegram.WebApp
 
@@ -9,15 +9,16 @@ function App() {
     TG.close()
   }
 
+  useEffect(() => {
+    if (TG) {
+      TG.ready()
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World
-        </p>
-        <button onClick={onClose}>Close</button>
-      </header>
+    <div className="page">
+      <header className="header">{TG?.initDataUnsafe?.user?.username}</header>
+      <button onClick={onClose}>Close</button>
     </div>
   );
 }
